@@ -1,0 +1,141 @@
+div
+{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50px   ;
+    counter-reset: item; 
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  .grid div
+  {
+    background-color: gray;
+    display: grid;
+   place-items: center center; 
+    position: relative;
+
+}
+
+.grid div::before {
+    counter-increment: item; /* زيادة العداد */
+    content: counter(item) ; /* يظهر رقم العنصر */
+    position: absolute;
+    right: 85px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: white;
+}
+
+.grid div::after
+{
+    content: "Element";
+    font-weight: bold;
+    color: white;
+}/*End task1*/
+.grid3 {
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px auto;
+  width: 800px;
+  height: 400px;
+  display: grid;
+  grid-template-columns:auto 1fr 1fr auto ;
+  grid-template-rows: 1fr auto auto;
+  gap: 20px 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.grid3 div
+{
+    background-color: #403f3f;
+    display: grid;
+    place-items: center center;
+}/*End task3*/
+.grid4 {
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px auto;
+  width: 800px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 10px 10px;
+}
+.grid4 div
+{
+  background-color: #2196f3;
+  display: grid;
+  place-items: center center;
+}
+.one
+{
+ grid-row: 6; 
+  grid-column:1/9;
+}
+.two
+{
+  grid-row: 2;
+  grid-column: 1/7;
+}
+.three
+{
+  grid-row: 2;
+  grid-column: 7/9;
+}
+.four
+{
+  grid-row: 3;
+  grid-column: 1/4;
+}
+.five
+{
+  grid-column: 4/9 ;
+  grid-row: 3/6;
+}
+.six
+{
+  grid-column: 1/4;
+  grid-row: 4;
+}
+.seven
+{
+  grid-column: 1/4;
+  grid-row: 5;
+}
+.eight
+{
+  grid-row: 1;
+  grid-column:1 / 9;
+}/*End task4*/
+.grid5 {
+  background-color: #ddd;
+  margin: 20px auto;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 30px 30px;
+  column-gap: 10px;
+  align-content: space-between;
+}
+.grid5 div
+{
+  background-color: #e91e63;
+  display: grid;
+  place-items: center center;
+}

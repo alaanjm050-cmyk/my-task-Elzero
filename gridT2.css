@@ -1,0 +1,41 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.layout
+{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 80px auto 80px;
+    grid-template-areas: 
+    "head head head head head"
+    "sec sec sec sec sid"
+    "foot foot foot foot foot";
+}
+header
+{
+    background-color: #03a9f4;
+    grid-area: head;
+    padding: 10px;
+}
+section
+{
+    background-color: #ff5722;
+    grid-area: sec;
+    padding: 10px;
+}
+aside
+{
+    background-color: #607d8b;
+    grid-area: sid;
+    padding: 10px;
+}
+footer
+{
+    background-color: #009688;
+    grid-area: foot;
+    padding: 10px;
+}
